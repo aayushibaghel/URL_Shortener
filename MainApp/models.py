@@ -30,4 +30,7 @@ class URL(models.Model):
     def save(self,*args,**kwargs):
         if not self.shortcode:
             self.shortcode = code_generator()
+        if not "http" in self.url:
+            self.url= "http://" + self.url
+        
         super(URL,self).save(*args,**kwargs)

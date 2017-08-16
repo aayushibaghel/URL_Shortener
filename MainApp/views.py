@@ -9,15 +9,9 @@ from django.core.urlresolvers import reverse
 
 # Create your views here.
 
-# def URL_Redirect_View(request,shortcode=None,*args,**kwargs):
-#     print("shortcode is {sc}".format(sc=shortcode))
-#     obj=URL.objects.get(shortcode=shortcode)
-#     print(obj)
-#     return HttpResponseRedirect(obj.url)
-
 def create_URL_shortcode(request):
     if request.method == 'GET':
-        return render(request,'home.html',{})
+        return render(request,'home.html',{'form':URLForm})
     if request.method == 'POST':
         form = URLForm(request.POST or None)
         url= request.POST.get('url')
