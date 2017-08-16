@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>URL_Shortener</title>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+body{background-image: url('https://newevolutiondesigns.com/images/freebies/nature-hd-background-25.jpg');background-size:100%}
+form{display:flex;margin-top:7%;margin-left:30%}
+#submit{margin-left:15px}
+h1{text-align:center;color:white;}
+h3{text-align:center;color:white;}
+.head{background-color:black}
+
+</style>
+</head>
+
+<body>
+<div class="head">
+            <h1>SHORTENER.CO</h1>
+            <h3>THE ULTIMATE SHORTENING SERVICE</h3>
+
+</div>
+    <div class="row">
+        <div class="col-xs-10 ">
+        
+<form method="POST" action="" id="form">{% csrf_token %}
+    <input type='text' class='form-control' id="input_url" name='url' placeholder="Enter your URL here">
+
+    <input type="submit" class='btn btn-primary' id="submit" value='Shorten' required>
+</form>
+</div>
+</div>
+</body>
+
+</html>
