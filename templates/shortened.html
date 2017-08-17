@@ -44,7 +44,7 @@ a:hover{color:green}
 
 </div>
 <div class="col-xs-6 col-xs-offset-3 content">
-    <h2>ORIGINAL : <h4><span id="original">{{ url|truncatechars:100 }}</span></h4></h2><hr>
+    <h2>ORIGINAL : <h4><span id="original">{{ url|truncatechars:100 }}</span></h4></h2><hr><br>
             <h2>Here's Your New URL : <h4><a href="{{ url }}"><span id="new">{{ shortcode }}</span></a></h4></h2>
 
             <a href="{% url 'home' %}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>Create New</button></a>
