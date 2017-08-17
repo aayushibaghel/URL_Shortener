@@ -10,6 +10,6 @@ def code_generator(len=SHORTCODE_MIN,chars= string.ascii_lowercase  + string.dig
      for _ in range(len):
          new_code += random.choice(chars)
 
-     new_code = "http://shortx.co/{0}".format(new_code)
+     new_code = "http://www.shortx.co/{0}".format(new_code)
      print(new_code)
      return new_code

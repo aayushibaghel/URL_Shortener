@@ -18,3 +18,10 @@ def create_URL_shortcode(request):
         obj,created = URL.objects.get_or_create(url=url)
         print(obj)
         return render(request,'shortened.html',{'url':obj.url,'shortcode':obj.shortcode})
+
+def URLRedirectView(request):
+    if request.method=="GET":
+        shortcode=request.GET.get('shortcode')
+        qs = URL.objects.filter(shortcode__iexact=shortcode)       
+        return HttpResponseRedirect(qs.url)
+

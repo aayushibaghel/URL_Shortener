@@ -20,4 +20,5 @@ from MainApp import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',views.create_URL_shortcode,name='home'),
+    url(r'^(?P<shortcode>[\w-]+)/$', views.URLRedirectView, name='scode'),
 ]
