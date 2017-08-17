@@ -22,16 +22,17 @@ a:hover{color:green}
 @media only screen and (max-width: 500px) {
     body {
         background-image: url('http://www.darkmediaonline.com/wp-content/uploads/2017/03/68557592-hd-1920x1080-wallpapers.jpg');
-        background-size:contain;background-repeat:repeat-y;text-align: center;max-height: 200px;
+        background-size:contain;background-repeat:repeat-y;text-align: center;max-height: 160px;
     }
 h2{text-align:center;color:white;}
 h1{text-align:center;color:white;}
-h4{color:white;margin-left:0px !important}
+h4{color:white;text-align: center;}
 h3{text-align:center;color:white;}
 .content{margin-top:10%}
 .head{margin-top:120px}
 a:hover{color:green}
-
+#original{float:left;}
+#new{margin-left:20px}
 }
 </style>
 </head>
@@ -43,8 +44,8 @@ a:hover{color:green}
 
 </div>
 <div class="col-xs-6 col-xs-offset-3 content">
-    <h2>ORIGINAL : <h4>{{ url|truncatechars:100 }}</h4></h2><hr>
-            <h2>Here's Your New URL : <h4><a href="{{ url }}">{{ shortcode }}</a></h4></h2>
+    <h2>ORIGINAL : <h4><span id="original">{{ url|truncatechars:100 }}</span></h4></h2><hr>
+            <h2>Here's Your New URL : <h4><a href="{{ url }}"><span id="new">{{ shortcode }}</span></a></h4></h2>
 
             <a href="{% url 'home' %}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>Create New</button></a>
 </div>
