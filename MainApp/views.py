@@ -23,6 +23,6 @@ def create_URL_shortcode(request):
 class URLRedirectView(View):
     def get(self, request, shortcode=None, *args, **kwargs):
         qs = KirrURL.objects.filter(shortcode__iexact=shortcode)
-        print("new url is %s"%(qs.url))
-        return HttpResponseRedirect(qs.url)
+        print("new url is %s"%(qs))
+        return HttpResponseRedirect(qs)
 
