@@ -5,6 +5,7 @@ from django.views.generic import TemplateView
 from django.http.response import HttpResponseRedirect, JsonResponse
 from .forms import URLForm
 from django.core.urlresolvers import reverse
+from django.views import View
 
 
 # Create your views here.
@@ -19,9 +20,9 @@ def create_URL_shortcode(request):
         print(obj)
         return render(request,'shortened.html',{'url':obj.url,'shortcode':obj.shortcode})
 
-def URLRedirectView(request):
-    if request.method=="GET":
-        shortcode=request.GET.get('shortcode')
-        qs = URL.objects.filter(shortcode__iexact=shortcode)       
+class URLRedirectView(View):
+    def get(self, request, shortcode=None, *args, **kwargs):
+        qs = KirrURL.objects.filter(shortcode__iexact=shortcode)
+        print("new url is %s"%(qs.url))
         return HttpResponseRedirect(qs.url)
 
