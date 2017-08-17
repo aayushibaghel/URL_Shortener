@@ -26,9 +26,9 @@ SECRET_KEY = 'jkamyz44c$7=fo(_op^ic3&4355qsy0!^m&3+f(a(hjbpty39#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.short.co','short.co',]
-DEFAULT_REDIRECT_URL = 'www.short.co'
-PARENT_HOST = 'short.co'
+ALLOWED_HOSTS = ['www.shortx.co','shortx.co',]
+DEFAULT_REDIRECT_URL = 'www.shortx.co'
+PARENT_HOST = 'shortx.co'
 
 # Application definition
 
